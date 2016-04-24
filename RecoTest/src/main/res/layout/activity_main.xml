@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ap1.recotest.recotest.MainActivity" >
+
+    <TextView
+        android:id="@+id/monitoringSwitchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/background_monitoring"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <Switch
+        android:id="@+id/backgroundMonitoringSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/monitoringSwitchLabel"
+        android:layout_alignBottom="@+id/monitoringSwitchLabel"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@+id/monitoringSwitchLabel"
+        android:textOn="ON"
+        android:textOff="OFF"
+        android:onClick="onMonitoringSwitchClicked"/>
+    
+    <TextView
+        android:id="@+id/rangingSwitchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/monitoringSwitchLabel"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/background_ranging"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+    <Switch
+        android:id="@+id/backgroundRangingSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rangingSwitchLabel"
+        android:layout_alignBottom="@+id/rangingSwitchLabel"
+        android:layout_marginLeft="25dp"
+        android:layout_toRightOf="@+id/rangingSwitchLabel"
+        android:textOn="ON"
+        android:textOff="OFF"
+        android:onClick="onRangingSwitchClicked"/>
+
+    <Button
+        android:id="@+id/monitoringButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/backgroundRangingSwitch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/start_monitoring" 
+        android:onClick="onButtonClicked"/>
+
+    <Button
+        android:id="@+id/rangingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/monitoringButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/start_ranging" 
+        android:onClick="onButtonClicked"/>
+
+    
+
+</RelativeLayout>
